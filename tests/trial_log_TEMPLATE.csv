@@ -1,0 +1,1 @@
+run_id,timestamp_local,robot_rev,commit_sha,challenge,profile,direction,track_layout,lighting,battery_start_V,battery_end_V,laps_completed,time_s,score,contacts,wrong_side_passes,parking_result,fault,evidence_url,tester,notes

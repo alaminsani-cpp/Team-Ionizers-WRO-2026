@@ -1,0 +1,15 @@
+
+digraph G {
+ graph [bgcolor="white",rankdir=LR,pad="0.35",nodesep="0.35",ranksep="0.65",fontname="DejaVu Sans",label="TEAM IONIZERS  |  CANDIDATE SYSTEM ARCHITECTURE  |  NOT VERIFIED INSTALLED",labelloc=t,fontsize=19,fontcolor="#163458"];
+ node [shape=box,style="rounded,filled",fontname="DejaVu Sans",fontsize=11,penwidth=1.3,color="#bed2e0",fillcolor="#edf4fb",fontcolor="#152f44",margin="0.20,0.14"];
+ edge[color="#4d7291",arrowsize=0.8,penwidth=1.5];
+ lidar [label="RPLIDAR C1\nplanned range scan"];
+ camera [label="Pi camera\nplanned RGB view"];
+ imu [label="IMU / encoder\noptional feedback"];
+ pi [label="Raspberry Pi 4 / 5\nTO VERIFY MODEL\nperception + planning",fillcolor="#d8eaf9",penwidth=2];
+ mcu [label="ESP32\nTO VERIFY MODEL\nlow-level control",fillcolor="#dff4e7",penwidth=2];
+ driver [label="BTS7960 candidate\ndrive bridge"];
+ steering [label="Servo candidate\nsteering linkage"];
+ motor [label="Geared motor\nconnected drive axle"];
+ lidar->pi; camera->pi; imu->pi [style=dashed,label="if fitted",fontsize=9]; pi->mcu[label="wired only",fontsize=10];mcu->driver; mcu->steering;driver->motor;
+}

@@ -1,0 +1,17 @@
+
+digraph G {
+ graph [bgcolor="white",rankdir=TB,pad="0.35",nodesep="0.32",ranksep="0.38",fontname="DejaVu Sans",label="TEAM IONIZERS  |  PROPOSED MISSION STATES  |  NOT A CLAIM OF IMPLEMENTATION",labelloc=t,fontsize=18,fontcolor="#163458"];
+ node [shape=box,style="rounded,filled",fontname="DejaVu Sans",fontsize=10,penwidth=1.3,color="#bad2e5",fillcolor="#eff6fb",fontcolor="#16324b"];
+ edge[color="#567e9e",arrowsize=0.8,penwidth=1.3,fontsize=9,fontname="DejaVu Sans"];
+ ready[label="READY / START"];
+ init[label="CHECK SENSORS + INITIALIZE"];
+ dir[label="FIND REQUIRED DIRECTION"];
+ straight[label="FOLLOW CORRIDOR"];
+ corner[label="CORNER HANDLING"];
+ sign[label="PASS SIGN\nObstacle mode only"];
+ lap[label="COUNT VERIFIED SECTION / LAP"];
+ end[label="3 LAPS COMPLETE?",shape=diamond,fillcolor="#ffeecd"];
+ park[label="PARKING\nObstacle mode"];
+ stop[label="CONTROLLED STOP / HALT",fillcolor="#dff3e7"];
+ ready->init->dir->straight;straight->corner;straight->sign[label="when sign present"];corner->lap;sign->lap;lap->end;end->straight[label="No"];end->stop[label="Yes / Open"];end->park[label="Yes / Obstacle"];park->stop;
+}

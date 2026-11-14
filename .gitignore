@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.log
+# Raw, selected evidence belongs in version control only when privacy and size allow.
+# Do not blanket-ignore actual robot code, configs, or calibration data.

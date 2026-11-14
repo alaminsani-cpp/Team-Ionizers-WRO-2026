@@ -1,0 +1,8 @@
+device,installed_model,rail_V,idle_A,peak_A,measured_or_datasheet,reference,notes
+Raspberry Pi,TO VERIFY,,,,,,
+ESP32,TO VERIFY,,,,,,
+RPLIDAR C1,TO VERIFY,,,,,,
+Camera,TO VERIFY,,,,,,
+Motor driver + motor,TO VERIFY,,,,,,
+Servo,TO VERIFY,,,,,,
+IMU / encoder (if installed),TO VERIFY,,,,,,

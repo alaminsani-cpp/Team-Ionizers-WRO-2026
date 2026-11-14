@@ -1,0 +1,2 @@
+net_id,source_device,source_pin,dest_device,dest_pin,signal_or_power,voltage_V,wire_color,notes,verified_by
+TO_VERIFY,,,,,,,,DO NOT wire from a blank pinmap,
